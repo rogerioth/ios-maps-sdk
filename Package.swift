@@ -21,15 +21,15 @@ import PackageDescription
 let package = Package(
   name: "GoogleMaps", platforms: [.iOS(.v14)],
   products: [
-    .library(name: "GoogleMaps", targets: ["GoogleMapsPackage"]),
-    .library(name: "GoogleMapsCore", targets: ["GoogleMapsPackage"]),
-    .library(name: "GoogleMapsBase", targets: ["GoogleMapsPackage"]),
-    .library(name: "GoogleMapsM4B", targets: ["GoogleMapsPackage"]),
-    .library(name: "GoogleMapsUtils", targets: ["GoogleMapsPackage"]),
-  ], dependencies: [],
+    .library(
+        name: "GoogleMaps", 
+        targets: ["GoogleMapsTargets"])
+  ],
+  dependencies: [],
   targets: [
     .binaryTarget(
-      name: "GoogleMapsPackage", url: "https://nuvyyo-bootstrap.s3.us-east-1.amazonaws.com/spm/GoogleMaps-6.2.1-beta.zip",
+      name: "GoogleMapsTargets", 
+      url: "https://nuvyyo-bootstrap.s3.us-east-1.amazonaws.com/spm/GoogleMaps-6.2.1-beta.zip",
       checksum: "88d75d16cecc97c5a2462810f48f2ab0760cbfbfa32faea8350a175692ea3f2b"
     )
   ]
