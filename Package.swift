@@ -25,6 +25,7 @@ let package = Package(
     .library(name: "GoogleMapsCore", targets: ["GoogleMapsCoreTarget"]),
     .library(name: "GoogleMapsBase", targets: ["GoogleMapsBaseTarget"]),
     .library(name: "GoogleMapsM4B", targets: ["GoogleMapsM4BTarget"]),
+    .library(name: "GoogleMapsUtils", targets: ["GoogleMapsUtilsTarget"]),
   ], dependencies: [],
   targets: [
     .binaryTarget(
