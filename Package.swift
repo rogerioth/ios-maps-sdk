@@ -21,11 +21,11 @@ import PackageDescription
 let package = Package(
   name: "GoogleMaps", platforms: [.iOS(.v14)],
   products: [
-    .library(name: "GoogleMaps", targets: ["GoogleMapsTarget"]),
-    .library(name: "GoogleMapsCore", targets: ["GoogleMapsCoreTarget"]),
-    .library(name: "GoogleMapsBase", targets: ["GoogleMapsBaseTarget"]),
-    .library(name: "GoogleMapsM4B", targets: ["GoogleMapsM4BTarget"]),
-    .library(name: "GoogleMapsUtils", targets: ["GoogleMapsUtilsTarget"]),
+    .library(name: "GoogleMaps", targets: ["GoogleMapsPackage"]),
+    .library(name: "GoogleMapsCore", targets: ["GoogleMapsPackage"]),
+    .library(name: "GoogleMapsBase", targets: ["GoogleMapsPackage"]),
+    .library(name: "GoogleMapsM4B", targets: ["GoogleMapsPackage"]),
+    .library(name: "GoogleMapsUtils", targets: ["GoogleMapsPackage"]),
   ], dependencies: [],
   targets: [
     .binaryTarget(
