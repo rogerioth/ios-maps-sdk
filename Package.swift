@@ -90,5 +90,17 @@ let package = Package(
       sources: ["GMSEmpty.m"],
       publicHeadersPath: "Sources"
     ),
+    .binaryTarget(
+      name: "GoogleMapsUtils",
+      url: "https://nuvyyo-bootstrap.s3.us-east-1.amazonaws.com/spm/GoogleMapsUtils.xcframework.zip",
+      checksum: "5832dae1a507e995b64451475ee5da4c8fa1bc682379a34163961b9d17d2a1df"
+    ),
+    .target(
+      name: "GoogleMapsUtilsTarget",
+      dependencies: ["GoogleMapsUtils"],
+      path: "Utils",
+      sources: ["GMSEmpty.m"],
+      publicHeadersPath: "Sources"
+    ),
   ]
 )
