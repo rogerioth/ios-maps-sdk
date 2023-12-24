@@ -31,60 +31,6 @@ let package = Package(
     .binaryTarget(
       name: "GoogleMapsPackage", url: "https://nuvyyo-bootstrap.s3.us-east-1.amazonaws.com/spm/GoogleMaps-6.2.1-beta.zip",
       checksum: "88d75d16cecc97c5a2462810f48f2ab0760cbfbfa32faea8350a175692ea3f2b"
-    ),
-    .target(
-      name: "GoogleMapsPackage",
-      dependencies: ["GoogleMaps"],
-      path: "Maps",
-      sources: ["GMSEmpty.m"],
-      resources: [.copy("Resources/GoogleMapsResources/GoogleMaps.bundle")],
-      publicHeadersPath: "Sources",
-      linkerSettings: [
-        .linkedLibrary("z"),
-        .linkedLibrary("c++"),
-        .linkedFramework("Accelerate"),
-        .linkedFramework("CoreData"),
-        .linkedFramework("CoreGraphics"),
-        .linkedFramework("CoreImage"),
-        .linkedFramework("CoreLocation"),
-        .linkedFramework("CoreTelephony"),
-        .linkedFramework("CoreText"),
-        .linkedFramework("GLKit"),
-        .linkedFramework("ImageIO"),
-        .linkedFramework("Metal"),
-        .linkedFramework("OpenGLES"),
-        .linkedFramework("QuartzCore"),
-        .linkedFramework("SystemConfiguration"),
-        .linkedFramework("UIKit"),
-      ]
-    ),
-    .target(
-      name: "GoogleMapsPackage",
-      dependencies: ["GoogleMapsCore"],
-      path: "Core",
-      sources: ["GMSEmpty.m"],
-      publicHeadersPath: "Sources"
-    ),
-    .target(
-      name: "GoogleMapsPackage",
-      dependencies: ["GoogleMapsBase"],
-      path: "Base",
-      sources: ["GMSEmpty.m"],
-      publicHeadersPath: "Sources"
-    ),
-    .target(
-      name: "GoogleMapsPackage",
-      dependencies: ["GoogleMapsM4B"],
-      path: "M4B",
-      sources: ["GMSEmpty.m"],
-      publicHeadersPath: "Sources"
-    ),
-    .target(
-      name: "GoogleMapsPackage",
-      dependencies: ["GoogleMapsUtils"],
-      path: "Utils",
-      sources: ["GMSEmpty.m"],
-      publicHeadersPath: "Sources"
-    ),
+    )
   ]
 )
