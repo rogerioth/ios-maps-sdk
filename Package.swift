@@ -29,11 +29,11 @@ let package = Package(
   ], dependencies: [],
   targets: [
     .binaryTarget(
-      name: "GoogleMaps", url: "https://dl.google.com/geosdk/swiftpm/8.3.1/GoogleMaps_3p.xcframework.zip",
-      checksum: "4d9b8a4836d52eb7ef6257968853a9949b02cde299a05fe7389efab54c59128c"
+      name: "GoogleMapsPackage", url: "https://nuvyyo-bootstrap.s3.us-east-1.amazonaws.com/spm/GoogleMaps-6.2.1-beta.zip",
+      checksum: "88d75d16cecc97c5a2462810f48f2ab0760cbfbfa32faea8350a175692ea3f2b"
     ),
     .target(
-      name: "GoogleMapsTarget",
+      name: "GoogleMapsPackage",
       dependencies: ["GoogleMaps"],
       path: "Maps",
       sources: ["GMSEmpty.m"],
@@ -58,46 +58,29 @@ let package = Package(
         .linkedFramework("UIKit"),
       ]
     ),
-    .binaryTarget(
-      name: "GoogleMapsCore", url: "https://dl.google.com/geosdk/swiftpm/8.3.1/GoogleMapsCore_3p.xcframework.zip",
-      checksum: "31d11bdb0b12bac2bf33e3416c15bd09258a4e193fd8a5ceb452bad281c66626"
-    ),
     .target(
-      name: "GoogleMapsCoreTarget",
+      name: "GoogleMapsPackage",
       dependencies: ["GoogleMapsCore"],
       path: "Core",
       sources: ["GMSEmpty.m"],
       publicHeadersPath: "Sources"
     ),
-    .binaryTarget(
-      name: "GoogleMapsBase", url: "https://dl.google.com/geosdk/swiftpm/8.3.1/GoogleMapsBase_3p.xcframework.zip",
-      checksum: "4e865a2f22e393f51546d4095452f4a93e067539a0c48339bb0f579fb5eb163a"
-    ),
     .target(
-      name: "GoogleMapsBaseTarget",
+      name: "GoogleMapsPackage",
       dependencies: ["GoogleMapsBase"],
       path: "Base",
       sources: ["GMSEmpty.m"],
       publicHeadersPath: "Sources"
     ),
-    .binaryTarget(
-      name: "GoogleMapsM4B", url: "https://dl.google.com/geosdk/swiftpm/8.3.1/GoogleMapsM4B_3p.xcframework.zip",
-      checksum: "26b92a9e5872f4e6375528fd4b7aa7a8c164a94a31e86e3eca51932cd52be790"
-    ),
     .target(
-      name: "GoogleMapsM4BTarget",
+      name: "GoogleMapsPackage",
       dependencies: ["GoogleMapsM4B"],
       path: "M4B",
       sources: ["GMSEmpty.m"],
       publicHeadersPath: "Sources"
     ),
-    .binaryTarget(
-      name: "GoogleMapsUtils",
-      url: "https://nuvyyo-bootstrap.s3.us-east-1.amazonaws.com/spm/GoogleMapsUtils.xcframework.zip",
-      checksum: "5832dae1a507e995b64451475ee5da4c8fa1bc682379a34163961b9d17d2a1df"
-    ),
     .target(
-      name: "GoogleMapsUtilsTarget",
+      name: "GoogleMapsPackage",
       dependencies: ["GoogleMapsUtils"],
       path: "Utils",
       sources: ["GMSEmpty.m"],
