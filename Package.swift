@@ -70,7 +70,7 @@ let package = Package(
     ),
     .binaryTarget(
       name: "GoogleMapsBase", url: "https://nuvyyo-bootstrap.s3.us-east-1.amazonaws.com/spm/GoogleMapsBase.xcframework.zip",
-      checksum: "e77b7df5e155bdd9c27cb5f211022d3d7fc7bc586a056c874ecbac83f21a8ea7"
+      checksum: "42813c113b0124018f8d640b57f8b0d41d9bca86287ff5421cd500fc2454b4cb"
     ),
     .target(
       name: "GoogleMapsBaseTarget",
