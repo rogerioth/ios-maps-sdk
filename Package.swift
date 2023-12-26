@@ -23,7 +23,7 @@ let package = Package(
   products: [
     .library(name: "GoogleMaps", targets: ["GoogleMapsTarget"]),
     .library(name: "GoogleMapsCore", targets: ["GoogleMapsCoreTarget"]),
-    .library(name: "GoogleMapsBase", targets: ["GoogleMapsBaseTarget"]),
+    .library(name: "GoogleMapsBase", targets: ["GoogleMapsBase"]),
     .library(name: "GoogleMapsUtils", targets: ["GoogleMapsUtilsTarget"]),
   ], dependencies: [],
   targets: [
@@ -69,15 +69,9 @@ let package = Package(
       publicHeadersPath: "Sources"
     ),
     .binaryTarget(
-      name: "GoogleMapsBase", url: "https://nuvyyo-bootstrap.s3.us-east-1.amazonaws.com/spm/GoogleMapsBase.xcframework.zip",
+      name: "GoogleMapsBase", 
+      url: "https://nuvyyo-bootstrap.s3.us-east-1.amazonaws.com/spm/GoogleMapsBase.xcframework.zip",
       checksum: "42813c113b0124018f8d640b57f8b0d41d9bca86287ff5421cd500fc2454b4cb"
-    ),
-    .target(
-      name: "GoogleMapsBaseTarget",
-      dependencies: ["GoogleMapsBase"],
-      path: "Base",
-      sources: ["GMSEmpty.m"],
-      publicHeadersPath: "Sources"
     ),
     .binaryTarget(
       name: "GoogleMapsUtils", url: "https://nuvyyo-bootstrap.s3.us-east-1.amazonaws.com/spm/GoogleMapsUtils.xcframework.zip",
